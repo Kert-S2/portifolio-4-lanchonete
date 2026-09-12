@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Point do Lanche — Hambúrguer artesanal e muito mais</title>
+<meta name="description" content="Point do Lanche: hambúrgueres artesanais, combos e lanches para pedir pelo WhatsApp. Peça já o seu!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <!-- PERSONALIZAR: nome da lanchonete -->
+    <a href="#topo" class="brand">🍔 Point do Lanche</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#combos">Combos</a>
+      <a href="#promo">Promoções</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="topo">
+
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="badge">Aberto agora · Delivery e retirada</p>
+      <h1>O lanche que faz<br>você sorrir antes<br>da primeira mordida.</h1>
+      <p class="hero-desc">Pão fresquinho, carne suculenta e aquele molho da casa. <!-- PERSONALIZAR: descrição --></p>
+      <a class="btn-whatsapp" href="https://wa.me/5581999999999" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+    </div>
+    <div class="hero-photo" aria-hidden="true"><span>Foto do lanche</span></div>
+  </section>
+
+  <section class="cardapio" id="cardapio">
+    <h2>Nosso cardápio</h2>
+    <div class="menu-tabs" id="menuTabs">
+      <button class="tab-btn active" data-tab="burgers">Hambúrgueres</button>
+      <button class="tab-btn" data-tab="dogs">Cachorro-quente</button>
+      <button class="tab-btn" data-tab="bebidas">Bebidas</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+      <article class="menu-card" data-tab="burgers">
+        <div class="menu-photo" aria-hidden="true">🍔</div>
+        <h3>Clássico</h3>
+        <p>Pão, hambúrguer 150g, queijo, alface e tomate.</p>
+        <span class="price">R$ 22</span>
+      </article>
+      <article class="menu-card" data-tab="burgers">
+        <div class="menu-photo" aria-hidden="true">🧀</div>
+        <h3>Duplo Cheddar</h3>
+        <p>Dois hambúrgueres, cheddar cremoso e bacon.</p>
+        <span class="price">R$ 30</span>
+      </article>
+      <article class="menu-card" data-tab="burgers">
+        <div class="menu-photo" aria-hidden="true">🌶️</div>
+        <h3>Picante da Casa</h3>
+        <p>Molho especial apimentado e cebola crispy.</p>
+        <span class="price">R$ 28</span>
+      </article>
+      <article class="menu-card" data-tab="dogs" style="display:none">
+        <div class="menu-photo" aria-hidden="true">🌭</div>
+        <h3>Dog Tradicional</h3>
+        <p>Salsicha, molho, milho, batata palha e queijo.</p>
+        <span class="price">R$ 15</span>
+      </article>
+      <article class="menu-card" data-tab="dogs" style="display:none">
+        <div class="menu-photo" aria-hidden="true">🌭</div>
+        <h3>Dog Especial</h3>
+        <p>Duas salsichas, bacon e catupiry.</p>
+        <span class="price">R$ 20</span>
+      </article>
+      <article class="menu-card" data-tab="bebidas" style="display:none">
+        <div class="menu-photo" aria-hidden="true">🥤</div>
+        <h3>Refrigerante lata</h3>
+        <p>Diversos sabores geladinhos.</p>
+        <span class="price">R$ 7</span>
+      </article>
+      <article class="menu-card" data-tab="bebidas" style="display:none">
+        <div class="menu-photo" aria-hidden="true">🧋</div>
+        <h3>Milkshake</h3>
+        <p>Chocolate, morango ou baunilha.</p>
+        <span class="price">R$ 16</span>
+      </article>
+    </div>
+    <!-- PERSONALIZAR: edite os itens; data-tab controla a aba do cardápio -->
+  </section>
+
+  <section class="combos" id="combos">
+    <h2>Combos que valem a pena</h2>
+    <div class="combo-grid">
+      <article class="combo-card">
+        <span class="combo-tag">Mais pedido</span>
+        <h3>Combo Duplo</h3>
+        <p>Hambúrguer duplo + batata média + refrigerante</p>
+        <span class="price">R$ 38</span>
+      </article>
+      <article class="combo-card">
+        <h3>Combo Família</h3>
+        <p>4 hambúrgueres clássicos + batata grande + 2L de refri</p>
+        <span class="price">R$ 89</span>
+      </article>
+      <article class="combo-card">
+        <h3>Combo Kids</h3>
+        <p>Mini hambúrguer + suco + brinde surpresa</p>
+        <span class="price">R$ 19</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="promo" id="promo">
+    <div class="promo-card">
+      <h2>Terça é dia de dobro!</h2>
+      <p>Compre um hambúrguer clássico e leve o segundo pela metade do preço. Válido só às terças. <!-- PERSONALIZAR: condições da promoção --></p>
+      <a class="btn-whatsapp light" href="https://wa.me/5581999999999" target="_blank" rel="noopener">Aproveitar promoção</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <h2>Onde estamos</h2>
+    <div class="contact-grid">
+      <ul class="info-list">
+        <li><strong>Endereço</strong> Rua da Aurora, 210 — Centro, Recife/PE</li>
+        <li><strong>Horário</strong> Todos os dias, 18h às 23h</li>
+        <li><strong>Telefone</strong> <a href="tel:+5581999999999">(81) 99999-9999</a></li>
+        <li><strong>Instagram</strong> <a href="https://instagram.com/" target="_blank" rel="noopener">@pointdolanche</a></li>
+      </ul>
+      <a class="btn-whatsapp" href="https://wa.me/5581999999999" target="_blank" rel="noopener">Fazer pedido agora</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Point do Lanche · Feito com 🧡 e muito molho especial</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5581999999999" target="_blank" rel="noopener" aria-label="Pedir pelo WhatsApp">Pedir agora</a>
+
+<script src="script.js"></script>
+</body>
+</html>

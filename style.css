@@ -1,0 +1,136 @@
+/* =========================================================
+   MODELO 4 — LANCHONETE (estética divertida / apetitosa)
+   Paleta: amarelo-mostarda + vermelho-tomate + creme
+   ========================================================= */
+
+:root{
+  --creme:#FFF8EC;
+  --mostarda:#F4A530;
+  --tomate:#E6472A;
+  --tomate-escuro:#C23A20;
+  --marrom:#3B2415;
+  --verde:#4C8C4A;
+  --display:'Baloo 2', sans-serif;
+  --sans:'Nunito Sans', sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--creme);color:var(--marrom);font-family:var(--sans);line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:var(--display);margin:0 0 .3em;font-weight:700;}
+
+/* ---------- HEADER ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:var(--creme);border-bottom:3px solid var(--marrom);}
+.header-inner{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;}
+.brand{font-family:var(--display);font-size:1.4rem;font-weight:700;}
+.main-nav{display:flex;gap:26px;}
+.main-nav a{font-weight:700;font-size:.95rem;}
+.main-nav a:hover{color:var(--tomate);}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;}
+.nav-toggle span{width:24px;height:3px;background:var(--marrom);border-radius:2px;}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;max-width:1180px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;overflow:hidden;}
+.blob{
+  position:absolute;top:-120px;right:-100px;width:420px;height:420px;border-radius:50%;
+  background:var(--mostarda);opacity:.35;z-index:0;
+}
+.hero-content{position:relative;z-index:1;}
+.badge{
+  display:inline-block;background:var(--verde);color:#fff;padding:6px 14px;border-radius:20px;
+  font-weight:700;font-size:.78rem;margin-bottom:16px;
+}
+.hero h1{font-size:clamp(2rem,4.6vw,3rem);line-height:1.15;color:var(--tomate-escuro);}
+.hero-desc{max-width:42ch;font-size:1.05rem;margin:16px 0 26px;}
+.btn-whatsapp{
+  display:inline-block;background:var(--tomate);color:#fff;padding:16px 30px;border-radius:40px;
+  font-weight:700;font-size:1rem;box-shadow:0 6px 0 var(--tomate-escuro);
+}
+.btn-whatsapp:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--tomate-escuro);}
+.btn-whatsapp.light{background:#fff;color:var(--tomate-escuro);box-shadow:0 6px 0 rgba(0,0,0,.15);}
+
+.hero-photo{
+  position:relative;z-index:1;aspect-ratio:1/1;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,var(--mostarda),var(--tomate));
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.95rem;
+  border:6px solid #fff;box-shadow:0 10px 30px rgba(59,36,21,.2);
+}
+
+/* ---------- CARDÁPIO ---------- */
+.cardapio{max-width:1180px;margin:70px auto;padding:0 24px;text-align:center;}
+.cardapio h2{font-size:2.1rem;color:var(--tomate-escuro);}
+.menu-tabs{display:flex;justify-content:center;gap:12px;margin:26px 0 36px;flex-wrap:wrap;}
+.tab-btn{
+  font-family:var(--display);font-weight:600;background:#fff;border:2px solid var(--marrom);
+  padding:10px 20px;border-radius:30px;cursor:pointer;font-size:.9rem;
+}
+.tab-btn.active{background:var(--tomate);border-color:var(--tomate);color:#fff;}
+
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left;}
+.menu-card{background:#fff;border-radius:20px;padding:22px;border:2px solid #f0e4cc;position:relative;}
+.menu-photo{
+  width:56px;height:56px;border-radius:50%;background:var(--creme);display:flex;align-items:center;
+  justify-content:center;font-size:1.6rem;margin-bottom:12px;
+}
+.menu-card h3{font-size:1.1rem;}
+.menu-card p{font-size:.88rem;color:#6b5643;margin:0 0 12px;}
+.price{display:inline-block;background:var(--mostarda);color:var(--marrom);padding:5px 14px;border-radius:14px;font-weight:700;font-size:.9rem;}
+
+/* ---------- COMBOS ---------- */
+.combos{background:var(--tomate);padding:70px 24px;}
+.combos h2{max-width:1180px;margin:0 auto 34px;color:#fff;font-size:2.1rem;text-align:center;}
+.combo-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.combo-card{background:#fff;border-radius:20px;padding:26px;position:relative;text-align:center;}
+.combo-tag{
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--verde);color:#fff;
+  padding:5px 14px;border-radius:14px;font-size:.75rem;font-weight:700;white-space:nowrap;
+}
+.combo-card h3{color:var(--tomate-escuro);margin-top:10px;}
+.combo-card p{font-size:.88rem;color:#6b5643;min-height:3em;}
+
+/* ---------- PROMO ---------- */
+.promo{max-width:1180px;margin:70px auto;padding:0 24px;}
+.promo-card{
+  background:var(--marrom);color:var(--creme);border-radius:24px;padding:50px;text-align:center;
+}
+.promo-card h2{color:var(--mostarda);font-size:2rem;}
+.promo-card p{max-width:52ch;margin:14px auto 26px;color:#e9dcc7;}
+
+/* ---------- CONTACT ---------- */
+.contact{max-width:1180px;margin:70px auto;padding:0 24px;}
+.contact h2{text-align:center;font-size:2.1rem;color:var(--tomate-escuro);margin-bottom:34px;}
+.contact-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;background:#fff;border-radius:20px;padding:34px;border:2px solid #f0e4cc;}
+.info-list{list-style:none;margin:0;padding:0;}
+.info-list li{padding:8px 0;font-size:.92rem;}
+.info-list strong{display:block;font-size:.75rem;text-transform:uppercase;color:var(--tomate);letter-spacing:.03em;}
+.info-list a{text-decoration:underline;}
+
+/* ---------- FOOTER ---------- */
+.site-footer{text-align:center;padding:26px;font-size:.85rem;color:#6b5643;}
+
+/* ---------- WHATSAPP FLOAT ---------- */
+.whatsapp-float{
+  position:fixed;bottom:20px;right:20px;z-index:60;background:var(--verde);color:#fff;
+  padding:14px 22px;border-radius:30px;font-weight:700;font-size:.88rem;box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .hero-photo{max-width:280px;margin:0 auto;}
+  .menu-grid{grid-template-columns:1fr 1fr;}
+  .combo-grid{grid-template-columns:1fr;}
+}
+@media (max-width:640px){
+  .main-nav{
+    position:absolute;top:100%;left:0;right:0;background:var(--creme);flex-direction:column;
+    padding:8px 24px 18px;border-bottom:3px solid var(--marrom);display:none;
+  }
+  .main-nav.open{display:flex;}
+  .main-nav a{padding:12px 0;border-bottom:1px solid #f0e4cc;}
+  .nav-toggle{display:flex;}
+  .site-header{position:relative;}
+  .menu-grid{grid-template-columns:1fr;}
+  .contact-grid{flex-direction:column;text-align:center;}
+  .promo-card{padding:30px;}
+}
